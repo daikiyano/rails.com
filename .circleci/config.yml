@@ -36,6 +36,10 @@ jobs:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
+        #production
+      - add_ssh_keys:
+          fingerprints:
+            - "9c:08:5e:c4:c0:e8:13:b2:93:47:52:d7:92:81:e0:34"
       # Database setup
       # - run: bundle exec rake db:create
       # - run: bundle exec rake db:schema:load
@@ -60,4 +64,10 @@ jobs:
       #     path: /tmp/test-results
       #     destination: test-results
 
-      
+      - deploy:
+          name: Start deploy
+          command: |
+      if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                ssh-keyscan -p ${PORT_NUMBER} ${PRODUCTION_HOST_NAME} >> ~/.ssh/known_hosts
+                bundle exec cap production deploy
+      fi
