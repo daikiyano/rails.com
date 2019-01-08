@@ -64,6 +64,15 @@ jobs:
       #     path: /tmp/test-results
       #     destination: test-results
 
+      - run:
+          name: Start ssh-agent
+          command: |
+            ssh-agent -s > ~/.ssh_agent_conf
+            source ~/.ssh_agent_conf
+            for _k in $(ls ${HOME}/.ssh/id_*); do
+              ssh-add ${_k} || true
+            done
+
 
       - deploy:
           name: Start deploy
