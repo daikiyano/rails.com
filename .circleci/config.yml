@@ -39,7 +39,7 @@ jobs:
         #production
       - add_ssh_keys:
           fingerprints:
-            - "9c:08:5e:c4:c0:e8:13:b2:93:47:52:d7:92:81:e0:34"
+            - "d3:50:3f:5f:ec:0c:00:36:c2:fb:55:df:95:8c:f3:85"
       # Database setup
       # - run: bundle exec rake db:create
       # - run: bundle exec rake db:schema:load
