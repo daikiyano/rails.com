@@ -13,6 +13,7 @@ set :rails_env, "production"
 set :migration_role, "db"
 server "35.200.99.86", user: "kusanagi", roles: %w{app db web}
 
+
 # set :ssh_options, {
 #   # capistranoコマンド実行者の秘密鍵
 #   port: 2222,
