@@ -15,16 +15,16 @@ server "35.200.99.86", user: "kusanagi", roles: %w{app db web}
 
 
 
-# set :ssh_options, {
-#   # capistranoコマンド実行者の秘密鍵
-#   port: 2222,
-#   keys: %w(~/.ssh/test5),
-#   password: [12345678],
-#   forward_agent: true,
-#   auth_methods: %w(publickey)
-#
-# }
-set :ssh_options, port: 2222, forward_agent: true
+set :ssh_options, {
+  # capistranoコマンド実行者の秘密鍵
+  port: 2222,
+  keys: %w(~/.ssh/gcp-test),
+  # password: [12345678],
+  forward_agent: true,
+  auth_methods: %w(publickey)
+
+}
+# set :ssh_options, port: 2222, forward_agent: true
 # role-based syntax
 # ==================
 
