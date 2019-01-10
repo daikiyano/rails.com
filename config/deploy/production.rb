@@ -24,7 +24,7 @@ server "35.200.99.86", user: "kusanagi", roles: %w{app db web}
 #   auth_methods: %w(publickey)
 #
 # }
-# set :ssh_options, port: 2222, forward_agent: true
+ set :ssh_options, port: 2222, forward_agent: true
 # role-based syntax
 # ==================
 
