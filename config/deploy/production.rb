@@ -11,7 +11,12 @@ set :branch, "master"
 set :stage, :production
 set :rails_env, "production"
 set :migration_role, "db"
-server "35.200.99.86", user: "kusanagi", roles: %w{app db web}
+server "35.200.99.86", user: "kusanagi", roles: %w{app db web},
+{
+   keys: %w(~/.ssh/gcp-test),
+   auth_methods: %w(publickey), # 認証方法 passwordも可能
+   #password: 'xxxxx' #password指定
+}
 
 
 
@@ -24,7 +29,7 @@ server "35.200.99.86", user: "kusanagi", roles: %w{app db web}
 #   auth_methods: %w(publickey)
 #
 # }
- set :ssh_options, port: 2222, forward_agent: true
+ # set :ssh_options, port: 2222, forward_agent: true
 # role-based syntax
 # ==================
 
