@@ -21,6 +21,7 @@ set :repo_url, "git@github.com:daikiyano/rails.com"
 # set :pty, true
 
 
+
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml"
 
