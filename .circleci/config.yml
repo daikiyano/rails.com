@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - checkout
-    
+
 
       # Download and cache dependencies
       - restore_cache:
@@ -40,7 +40,7 @@ jobs:
         #production
       - add_ssh_keys:
           fingerprints:
-            - "d3:50:3f:5f:ec:0c:00:36:c2:fb:55:df:95:8c:f3:85"
+            - "13:3e:cc:b8:da:2d:65:e6:ce:a1:e6:b1:79:c0:4c:b4"
       # Database setup
       # - run: bundle exec rake db:create
       # - run: bundle exec rake db:schema:load
