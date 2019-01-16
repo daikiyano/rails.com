@@ -22,7 +22,7 @@ set :ssh_options, {
   keys: %w(~/.ssh/gcp-test),
   # password: [12345678],
   forward_agent: true,
-  auth_methods: %w(privatekey)
+  auth_methods: %w(publickey)
 
 }
  # set :ssh_options, port: 2222, forward_agent: true
